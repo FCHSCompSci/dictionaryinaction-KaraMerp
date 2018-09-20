@@ -1,45 +1,31 @@
-#Kara Morgan
-#Dictionary 9/18/18
+# Kara Morgan
+# dictionary project 9/17/18
 
-Hoody = []
-shirt = []
-tanktop = []
+def make_shirt(s_id,size,color,design):
+    shirt = {
+        's_id' : shirt_id,
+        'size' : size,
+        'color' : color,
+        'design' : design
+        }
+    return shirt
 
-order = input("Would you like to place a order?: ")
-orders = Hoody + shirt + tanktop
+def make_customer(s_id,name):
+    customer = {
+        's_id' : shirt_id,
+        'name' : name
+        }
+    return customer
 
-if order == "no":
-    print("Bye!")
-else:
-    print("For a Hoodie use the first funtion, for a Shirt use the second function, and for a Tanktop use the third function. ")
-    while order == "yes":   
-        def first(size, color, design):
-            Hoody={
-                'size' : size,
-                'color' : color,
-                'design' : design
-                }
-            hoody.append(Hoody)
-            return "Thank you for your Hoodie order" 
+shirt_id = 0
 
-
-        def second(size, color, design):
-            shirt={
-                'size' : size,
-                'color' : color,
-                'design' : design
-                }
-            shirt.append(shirt)
-            return "thank you for your Shirt order"
-
-        def third(size, color, design):
-            tanktop={
-                'size' : size,
-                'color' : color,
-                'design' :  design
-                }
-            tanktop.append(tanktop)
-            return "Thank you for your Tanktop order"
-
+while True:
+    user_input = input("Would you like to order a [s]hirt, [p]ickup or [e]xit? ")
+    if user_input == "s":
+        order_name = input("What is the name for the order? ")
+        shirt_id = shirt_id + 1
+        shirt_size = input("What size would you like? ")
+        shirt_color = input("What color would you like? ")
+        shirt_design = input("What design would you like? ")
 
 
